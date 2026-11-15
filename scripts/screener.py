@@ -49,11 +49,11 @@ def main(argv):
         print("列: ticker,dividend_yield,gross_margin,debt_ratio,roe,peg")
         return 2
     results = screen(argv[1])
-    print(f"{chr(20195)+chr(30721):<14}{chr(36890)+chr(36807):<8}未通过")
+    print(f"{'代码':<14}{'通过':<8}未通过")
     print("-" * 60)
     for ticker, n, passed, failed in results:
         mark = "✅ 进观察池" if n == len(CHECKS) else ""
-        print(f"{ticker:<14}{n}/5      {chr(44).join(failed) or chr(20840)+chr(37096)+chr(36890)+chr(36807)} {mark}")
+        print(f"{ticker:<14}{n}/5      {', '.join(failed) or '全部通过'} {mark}")
     watch = sum(1 for _, n, _, _ in results if n == len(CHECKS))
     print("-" * 60)
     print(f"共 {len(results)} 只，{watch} 只五项全过。")
