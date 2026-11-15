@@ -1,0 +1,4 @@
+ticker,dividend_yield,gross_margin,debt_ratio,roe,peg
+EXAMPLE-A,0.062,0.45,0.22,0.24,0.85
+EXAMPLE-B,0.031,0.52,0.18,0.26,0.90
+EXAMPLE-C,0.058,0.38,0.41,0.19,1.20
